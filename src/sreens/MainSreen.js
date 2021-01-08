@@ -1,7 +1,8 @@
 import React from 'react';
-import {StyleSheet, View, FlatList, Text, Image} from 'react-native';
+import {StyleSheet, View, FlatList, Image} from 'react-native';
 import {AddTodo} from '../components/AddToDo';
 import {Todo} from '../components/Todo';
+import {AppTitle} from '../components/ui/AppTitle';
 
 export const MainSreen = ({addTodo, todos, removeTodo, openTodo}) => {
 
@@ -17,8 +18,8 @@ export const MainSreen = ({addTodo, todos, removeTodo, openTodo}) => {
         <View style={styles.imgWrap}>
             <Image 
                 style={styles.img} 
-                source={require('../../assets/no-items.png')}/>
-            <Text style={styles.text}>Список пустой</Text>
+                source={require('../../assets/img/no-items.png')}/>
+            <AppTitle style={styles.text}>Список пустой</AppTitle>
         </View>
     }
 

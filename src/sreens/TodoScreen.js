@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import {StyleSheet, View, Text, Button,} from 'react-native';
+import {StyleSheet, View, Button,} from 'react-native';
 import {THEME} from '../theme';
 import {AppCard} from '../components/ui/AppCard';
 import {EditModal} from '../components/EditModal';
+import {AppTitle} from '../components/ui/AppTitle';
 
 export const TodoScreen = ({goBack, todo, onRemove, onSave}) => {
     const [modal, setModal] = useState(false);
@@ -21,7 +22,7 @@ export const TodoScreen = ({goBack, todo, onRemove, onSave}) => {
                 onCansel={() => setModal(false)}
                 onSave={saveHandler} />
             <AppCard style={styles.card}>
-                <Text style={styles.title}>{todo.title}</Text>
+                <AppTitle style={styles.title}>{todo.title}</AppTitle>
                 <View style={{width: '100%'}}>
                     <Button 
                         title="Редактировать"

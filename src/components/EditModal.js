@@ -55,7 +55,8 @@ const styles = StyleSheet.create({
         padding: 10,
         borderWidth: 1,
         borderColor: 'black',
-        width: '80%'
+        width: '80%',
+        fontFamily: 'roboto-regular'
     },
     btns: {
         width: '100%',

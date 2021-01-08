@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { StyleSheet,  View, TextInput, Button, Alert } from 'react-native';
 import {THEME} from '../theme';
+import { MaterialIcons } from '@expo/vector-icons'; 
 
 export const AddTodo = ({ onSubmit }) => {
 
@@ -24,10 +25,13 @@ export const AddTodo = ({ onSubmit }) => {
                 onChangeText={setValue}
                 value={value}
                 placeholder="Введите название дела..."/>
-            <Button 
-                title="Добавить" 
+            <MaterialIcons.Button
+                style={styles.button} 
+                name="post-add"  
                 onPress={pressHandler} 
-                color="black"/>
+                >
+                ДОБАВИТЬ
+            </MaterialIcons.Button>
         </View>
     )
 }
@@ -40,9 +44,18 @@ const styles = StyleSheet.create ({
         marginBottom: 15
     },
     input: {
-        width: '70%',
+        height: 45,
+        width: '65%',
         padding: 10,
         borderColor: THEME.MAIN_COLOR,
-        borderWidth: 1
+        borderWidth: 1,
+        fontFamily: 'roboto-regular',
+    },
+    button: {
+        height: 40,
+        backgroundColor: 'black',
+        color: 'white',
+        fontFamily: 'roboto-regular',
+        fontSize: 26
     }
 })
